@@ -10,10 +10,10 @@ public class BuscaProfessor {
         this.professorService = professorService;
     }
 
-    public Professor busca(int id) {
-        String atendimentoJSON = professorService.busca(id);
+    public Professor buscaProfessor(int id) {
+        String professorJSON = professorService.busca(id);
 
-        JsonObject jsonObject = JsonParser.parseString(atendimentoJSON).getAsJsonObject();
+        JsonObject jsonObject = JsonParser.parseString(professorJSON).getAsJsonObject();
 
         Professor aux = new Professor(jsonObject.get("nomeDoProfessor").getAsString(),
                 jsonObject.get("horarioDeAtendimento").getAsString(),
@@ -21,5 +21,4 @@ public class BuscaProfessor {
 
         return aux;
     }
-
 }

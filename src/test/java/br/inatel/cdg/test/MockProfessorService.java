@@ -1,8 +1,9 @@
-package br.inatel.cdg;
+package br.inatel.cdg.test;
 
+import br.inatel.cdg.ProfessorService;
 import br.inatel.cdg.test.ProfessorConst;
 
-public class MockProfessorService implements ProfessorServiceService {
+public class MockProfessorService implements ProfessorService {
 
     @Override
     public String busca(int id) {
